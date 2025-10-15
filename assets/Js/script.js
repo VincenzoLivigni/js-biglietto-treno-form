@@ -12,9 +12,30 @@ const ageEl = document.getElementById("eta");
 // console.log(ageEl);
 
 const bottoneEl = document.getElementById("button");
-// console.log(bottoneEl);
+console.log(bottoneEl);
 
+// al click del bottone calcola valore totale
+bottoneEl.addEventListener("click", () => {
 
+// creo una variabile per il prezzo al km 
+const price = kmEl.value * 0.21;
+// console.log(price);
+
+    // con delle istruzioni condizionali calcolo il totale del biglietto in base all'età dell'utente 
+    if (ageEl.value < 18) {
+        const under_18 = price - (price * 20 / 100)
+        // stampo il prezzo del biglietto calcolando uno sconto del 20% (se l'utente ha meno di 18 anni)
+        console.log(`Il prezzo del tuo biglietto è di € ${under_18}`);
+    } else if (ageEl.value > 65) {
+        const over_65 = price - (price * 40 / 100)
+        // stampo il prezzo del biglietto calcolando uno sconto del 40% (se l'utente ha più di 65 anni)
+        console.log(`Il prezzo del tuo biglietto è di € ${over_65}`);
+    } else {
+        // stampo il prezzo del biglietto (prezzo base)
+        const prezzo_standard = price;
+        console.log(`Il prezzo del tuo biglietto è di € ${prezzo_standard}`);
+    }
+})
 
 /*
 MILESTONE 2:
