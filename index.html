@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
-</head>
-<body>
+        <link rel="stylesheet" href="./assets/css/style.css">
 
-     <p>Km da percorrere: <span id="percorso"></span></p>
-      <p>Età: <span id="fascia"></span></p>
+    </head>
+    <body>
+        <!-- container -->
+        <div class="container py-3 bg-danger">
+            <div class="text-center">
+                <h1 class="text-white">Calcola biglietto treno</h1>
+                <div class="card-body">
 
-        <form action="">
-            <input type="number" placeholder="inserisci il numero di chilometri da percorrere" id="kms" value="" required>
-            <input type="number" placeholder="inserisci la tua età" id="eta" value="" required>
+                    <!-- form -->
+                    <form action>
+                        <div class="my-4">
+                            <input type="number"
+                                placeholder="inserisci il numero di chilometri da percorrere"
+                                id="kms" value required>
 
-            <button id="button">Invia</button>
-        </form>
+                            <input type="number"
+                                placeholder="inserisci la tua età"
+                                id="eta"
+                                value required>
+                        </div>
 
-     <p>Prezzo biglietto: <span id="biglietto"></span></p>
+                        <!-- bottone -->
+                        <button id="button">Calcola prezzo</button>
+                    </form>
+                        
+                    <div class="text-start mt-3">
+                        <p class="fw-medium">Km da percorrere:
+                            <span id="percorso"></span>
+                        </p>
+                        <p class="fw-medium">Età:
+                            <span id="fascia"></span>
+                        </p>
+                        <p class="fw-medium">Prezzo biglietto:
+                            <span id="biglietto"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <script src="./assets/Js/script.js">
 
-    <script src="./assets/Js/script.js">
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>
